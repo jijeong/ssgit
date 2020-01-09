@@ -1,12 +1,16 @@
 name: CI
 
+# 누군가 이 repository에 push를 하면
 on: [push]
 
+# 이 job을 build(실행)하라
 jobs:
   build:
 
+    # 우분투 체제에서 실행합니다
     runs-on: ubuntu-latest
-
+  
+    # 이 step으로 action 합니다.
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
